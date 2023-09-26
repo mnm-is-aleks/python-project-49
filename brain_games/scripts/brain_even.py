@@ -25,6 +25,9 @@ def game_even():
                 break
     if cnt == 3:
         print(f'Congratulations, {name}!')
+    else:
+        wrong_answer = is_even(n) and 'yes' or 'no'
+        print(f"'{answer}' is wrong answer ;(. Correct answer was '{wrong_answer}'.\nLet's try again, {name}!")
 
 
 def main():
