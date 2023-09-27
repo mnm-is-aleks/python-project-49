@@ -10,6 +10,8 @@ def get_interface(task):
             print('Answer "yes" if the number is even, otherwise answer "no".')
         case 'gcd':
             print('Find the greatest common divisor of given numbers.')
+        case 'progression':
+            print('What number is missing in the progression?')
     return name
 
 
