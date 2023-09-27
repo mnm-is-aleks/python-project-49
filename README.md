@@ -3,4 +3,4 @@
 ### Code Climate
 [![Maintainability](https://api.codeclimate.com/v1/badges/a8b0ee034a52ab3eb453/maintainability)](https://codeclimate.com/github/mnm-is-aleks/python-project-49/maintainability)
 #### Asciinema brain-even
-[![asciicast](https://asciinema.org/a/VnGc2YWFrPzwmKgEHSy74cWXy.svg)](https://asciinema.org/a/VnGc2YWFrPzwmKgEHSy74cWXy)
+[![asciicast](https://asciinema.org/a/67588H9DyfQhSmfxWmcwMyuWt.svg)](https://asciinema.org/a/67588H9DyfQhSmfxWmcwMyuWt)
