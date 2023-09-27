@@ -8,6 +8,8 @@ def get_interface(task):
             print('What is the result of the expression?')
         case 'even':
             print('Answer "yes" if the number is even, otherwise answer "no".')
+        case 'gcd':
+            print('Find the greatest common divisor of given numbers.')
     return name
 
 
