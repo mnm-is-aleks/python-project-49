@@ -1,8 +1,9 @@
-import brain_games.scripts.brain_games as mn
+import brain_games.scripts.brain_games as bg
 
 
 def get_interface(task):
-    name = mn.main()
+    bg.main()
+    name = bg.name
     match task:
         case 'calc':
             print('What is the result of the expression?')
@@ -14,7 +15,7 @@ def get_interface(task):
             print('What number is missing in the progression?')
         case 'prime':
             print('Answer "yes" if given number is prime.'
-                  'Otherwise answer "no".')
+                  ' Otherwise answer "no".')
     return name
 
 
