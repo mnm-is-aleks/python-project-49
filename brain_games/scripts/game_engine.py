@@ -6,7 +6,12 @@ def game_loop(name, game_logic):
     while cnt < 3:
         value, condition = game_logic()
         print(f'Question: {value}')
-        answer = prompt.integer('Your answer: ')
+        if isinstance(condition, int):
+            answer = prompt.integer('Your answer: ')
+        elif isinstance(condition, str):
+            answer = prompt.string('Your answer: ')
+        else:
+            break
         if condition == answer:
             cnt += 1
             print('Correct!')

@@ -12,6 +12,9 @@ def get_interface(task):
             print('Find the greatest common divisor of given numbers.')
         case 'progression':
             print('What number is missing in the progression?')
+        case 'prime':
+            print('Answer "yes" if given number is prime.'
+                  'Otherwise answer "no".')
     return name
 
 
