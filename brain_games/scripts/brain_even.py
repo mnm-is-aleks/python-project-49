@@ -1,38 +1,17 @@
 from random import randint
-import prompt
-import brain_games.scripts.brain_games as mn
+from brain_games.scripts.game_interfaces import get_interface
+from brain_games.scripts.game_engine import game_loop
 
 
-def is_even(n):
-    return n % 2 == 0
-
-
-def game_even():
-    name = mn.main()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    cnt = 0
-    while cnt < 3:
-        n = randint(1, 50)
-        print(f'Question: {n}')
-        answer = prompt.string('Your answer: ')
-        if answer not in ('yes', 'no'):
-            break
-        else:
-            if (is_even(n) and 'yes' or 'no') == answer:
-                cnt += 1
-                print('Correct!')
-            else:
-                break
-    if cnt == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        wrong_answer = is_even(n) and 'yes' or 'no'
-        print(f"'{answer}' is wrong answer ;(."
-              f"Correct answer was '{wrong_answer}'.\nLet's try again, {name}!")
+def is_even():
+    value = randint(1, 50)
+    condition = value % 2 == 0 and 'yes' or 'no'
+    return value, condition
 
 
 def main():
-    game_even()
+    name = get_interface('even')
+    game_loop(name, is_even)
 
 
 if __name__ == '__main__':
