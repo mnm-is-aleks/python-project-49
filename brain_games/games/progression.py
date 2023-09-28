@@ -1,7 +1,5 @@
 from random import randint
 from random import choice
-from brain_games.scripts.game_interfaces import get_interface
-from brain_games.scripts.game_engine import game_loop
 
 
 def make_progression():
@@ -15,12 +13,3 @@ def make_progression():
     new_ls[current] = '..'
     value = " ".join(new_ls)
     return value, condition
-
-
-def main():
-    name = get_interface('progression')
-    game_loop(name, make_progression)
-
-
-if __name__ == '__main__':
-    main()
