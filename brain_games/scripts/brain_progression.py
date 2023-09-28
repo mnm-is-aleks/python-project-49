@@ -13,7 +13,7 @@ def make_progression():
     condition = ls[current]
     new_ls = [str(i) for i in ls]
     new_ls[current] = '..'
-    value = ", ".join(new_ls)
+    value = " ".join(new_ls)
     return value, condition
 
 
