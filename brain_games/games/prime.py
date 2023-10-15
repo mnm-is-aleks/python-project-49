@@ -10,4 +10,4 @@ def game_logic():
     return n, 'yes'
 
 
-DESCRIPTION = 'Answer "yes" if given number is prime.\n Otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
