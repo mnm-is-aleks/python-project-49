@@ -1,10 +1,10 @@
 from brain_games.games.even import is_even
-from brain_games.game_interfaces import get_interface
+import brain_games.scripts.brain_games as bg
 from brain_games.game_engine import game_loop
 
 
 def main():
-    name = get_interface('even')
+    name = bg.greetings()
     game_loop(name, is_even)
 
 
