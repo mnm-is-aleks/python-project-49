@@ -2,7 +2,7 @@ from random import randint
 from math import sqrt
 
 
-def is_prime():
+def game_logic():
     n = randint(2, 30)
     for i in range(2, int(sqrt(n)) + 1):
         if n % i == 0:
@@ -10,6 +10,4 @@ def is_prime():
     return n, 'yes'
 
 
-def task():
-    print('Answer "yes" if given number is prime.'
-          ' Otherwise answer "no".')
+DESCRIPTION = 'Answer "yes" if given number is prime.\n Otherwise answer "no".'

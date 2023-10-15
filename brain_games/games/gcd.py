@@ -1,7 +1,7 @@
 from random import randint
 
 
-def get_gcd():
+def game_logic():
     a, b = randint(1, 10), randint(1, 10)
     question = f'{a} {b}'
     n = a % b
@@ -12,5 +12,4 @@ def get_gcd():
     return question, correct_answer
 
 
-def task():
-    print('Find the greatest common divisor of given numbers.')
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'

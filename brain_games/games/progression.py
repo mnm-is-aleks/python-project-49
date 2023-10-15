@@ -2,7 +2,7 @@ from random import randint
 from random import choice
 
 
-def make_progression():
+def game_logic():
     n = int(choice('2345'))
     a = randint(1, 10)
     b = n * 10
@@ -15,5 +15,4 @@ def make_progression():
     return question, correct_answer
 
 
-def task():
-    print('What number is missing in the progression?')
+DESCRIPTION = 'What number is missing in the progression?'

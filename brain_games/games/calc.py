@@ -3,7 +3,7 @@ from random import choice
 import operator
 
 
-def expression():
+def game_logic():
     op = choice('+-*')
     a, b = randint(1, 10), randint(1, 10)
     sl_op = {'+': operator.add, '*': operator.mul, '-': operator.sub}
@@ -12,5 +12,4 @@ def expression():
     return question, correct_answer
 
 
-def task():
-    print('What is the result of the expression?')
+DESCRIPTION = 'What is the result of the expression?'
