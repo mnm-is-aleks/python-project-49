@@ -1,11 +1,9 @@
-import brain_games.scripts.brain_games as bg
 from brain_games.game_engine import game_loop
-from brain_games.games.prime import is_prime
+from brain_games.games.prime import is_prime, task
 
 
 def main():
-    name = bg.greetings()
-    game_loop(name, is_prime)
+    game_loop(is_prime, task)
 
 
 if __name__ == '__main__':

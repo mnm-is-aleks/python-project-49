@@ -1,7 +1,11 @@
 import prompt
 
 
-def game_loop(name, game_logic):
+def game_loop(game_logic, task):
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    task()
     count = 0
     while count < 3:
         question, correct_answer = game_logic()
@@ -14,5 +18,5 @@ def game_loop(name, game_logic):
             print(f"'{answer}' is wrong answer ;(."
                   f"Correct answer was '{correct_answer}'.\n"
                   f"Let's try again, {name}!")
-            break
+            return
         print(f'Congratulations, {name}!')

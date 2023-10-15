@@ -3,7 +3,6 @@ from random import choice
 
 
 def make_progression():
-    print('What number is missing in the progression?')
     n = int(choice('2345'))
     a = randint(1, 10)
     b = n * 10
@@ -14,3 +13,7 @@ def make_progression():
     new_ls[current] = '..'
     question = " ".join(new_ls)
     return question, correct_answer
+
+
+def task():
+    print('What number is missing in the progression?')
