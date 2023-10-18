@@ -2,16 +2,23 @@ from random import randint
 from random import choice
 
 
+def get_progression(start_num, finish_num, step):
+    progression = [i for i in range(start_num, finish_num + start_num, step)]
+    current_position = randint(1, 8)
+    correct_answer = str(progression[current_position])
+    return progression, current_position, correct_answer
+
+
 def game_logic():
-    n = int(choice('2345'))
-    a = randint(1, 10)
-    b = n * 10
-    ls = [i for i in range(a, b + a, n)]
-    current = randint(1, 8)
-    correct_answer = str(ls[current])
-    new_ls = [str(i) for i in ls]
-    new_ls[current] = '..'
-    question = " ".join(new_ls)
+    step = int(choice('2345'))
+    start_num = randint(1, 10)
+    finish_num = step * 10
+    progression, current_position, correct_answer = (
+        get_progression(start_num, finish_num, step)
+    )
+    progression_str = [str(i) for i in progression]
+    progression_str[current_position] = '..'
+    question = " ".join(progression_str)
     return question, correct_answer
 
 

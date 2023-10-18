@@ -1,14 +1,18 @@
 from random import randint
 
 
+def get_gcd(number_a, number_b):
+    div_remainder = number_a % number_b
+    while div_remainder != 0:
+        number_a, number_b = number_b, div_remainder
+        div_remainder = number_a % number_b
+    return str(number_b)
+
+
 def game_logic():
-    a, b = randint(1, 10), randint(1, 10)
-    question = f'{a} {b}'
-    n = a % b
-    while n != 0:
-        a, b = b, n
-        n = a % b
-    correct_answer = str(b)
+    number_a, number_b = randint(1, 10), randint(1, 10)
+    question = f'{number_a} {number_b}'
+    correct_answer = get_gcd(number_a, number_b)
     return question, correct_answer
 
 
